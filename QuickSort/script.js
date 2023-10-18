@@ -10,13 +10,15 @@ function qsort(lista){
     if(lista.length < 2){
         return lista
     }
-
-    for(i = 0; i <= UltimoIndex; i++){
-       if(lista[i] < pivo){
-        menor.push(lista[i])
-       } else if(lista[i] > pivo){
-        maior.push(lista[i])
-       }
+    
+    let i =0 
+    while(i <= UltimoIndex){
+        if(lista[i] < pivo){
+            menor.push(lista[i])
+           } else if(lista[i] > pivo){
+            maior.push(lista[i])
+           }
+        i++
     }
     /* Concatenação com Spread */
     return[...qsort(menor),pivo,...qsort(maior)]
